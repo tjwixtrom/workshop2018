@@ -1,3 +1,4 @@
 *.DS_Store
 2015020112/
 *.tar.gz
+.ipynb_checkpoints/
