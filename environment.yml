@@ -11,3 +11,4 @@
    - netcdf4
    - numba
    - pint
+   - pandas
