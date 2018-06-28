@@ -10,3 +10,4 @@
    - jupyterlab
    - netcdf4
    - numba
+   - pint
