@@ -27,5 +27,5 @@ plt.legend(handles=[red_patch, orange_patch, green_patch], loc=1)
 
 # Make some titles
 plt.title('Ensemble Mean Sea Level Pressure Spaghetti Plot', loc='left')
-plt.title('VALID: %s' % (vtimes[time]), loc='right')
+plt.title('VALID: {0:%Y-%m-%d %H:%M:%S}'.format(vtimes[0]), loc='right')
 plt.show()

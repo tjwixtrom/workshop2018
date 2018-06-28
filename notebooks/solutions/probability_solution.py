@@ -5,7 +5,7 @@ for i in range(1, 21):
 
 point_probs = ens_prob(25., operator.gt, *[uh[key] for key in uh.keys()])
 
-nprobs_uh = neighborhood_prob(point_probs, 40000, tlons, tlats)
+nprobs_uh = neighborhood_prob(point_probs, 40000 * units.meter, tlons, tlats)
 
 # Choose a time to plot
 time = 2
@@ -23,5 +23,5 @@ cf = ax.contourf(lon, lat, nprobs_uh[time,], contours, transform=ccrs.PlateCarre
 plt.colorbar(cf, orientation='horizontal', shrink=0.5, pad=0.05)
 # Make some titles
 plt.title('NMEP of Updraft Helicity Greater Than 25 m$^2$s$^{-2}$ within 40 km', loc='left')
-plt.title('VALID: %s' % (vtimes[time]), loc='right')
+plt.title('VALID: {0:%Y-%m-%d %H:%M:%S}'.format(vtimes[time]), loc='right')
 plt.show()
