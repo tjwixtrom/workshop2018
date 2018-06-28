@@ -25,6 +25,6 @@ for i in range(len(pcp_paintballs)):
 
 # Make some titles and legend
 plt.title('Ensemble Member Paintballs Timestep Precipitation > 10 mm', loc='left')
-plt.title('VALID: %s' % (vtimes[time]), loc='right')
+plt.title('VALID: {0:%Y-%m-%d %H:%M:%S}'.format(vtimes[time]), loc='right')
 plt.legend(loc=4)
 plt.show()
